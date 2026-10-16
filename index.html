@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preload" href="assets/servicesBG.jpg" as="image" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelley Accounting & Tax Advisors</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/Icon no BG.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo">
+          <img src="assets/logo.png" alt="RHN" class="logo-img" />
+        </div>
+
+        <div class="nav-links">
+          <div class="dropdown">
+            <a href="#" class="active">HOME</a>
+          </div>
+          <!-- <a href="#" class="active">HOME</a> -->
+          <div class="dropdown">
+            <a href="about.html">ABOUT</a>
+          </div>
+          <div class="dropdown">
+            <a href="services.html">SERVICES</a>
+          </div>
+          <a href="#">CONTACT US</a>
+          <a href="#" class="client-portal-btn">CLIENT PORTAL</a>
+        </div>
+
+        <button class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+
+    <section class="hero"></section>
+
+    <script>
+      // Mobile menu functionality
+      document
+        .querySelector(".mobile-menu-btn")
+        .addEventListener("click", function () {
+          this.classList.toggle("active");
+          document.querySelector(".nav-links").classList.toggle("active");
+        });
+    </script>
+  </body>
+</html>

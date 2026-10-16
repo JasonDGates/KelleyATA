@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preload" href="assets/servicesBG.jpg" as="image" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelley ATA - About Us</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/Icon no BG.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo">
+          <img src="assets/logo.png" alt="RHN" class="logo-img" />
+        </div>
+
+        <div class="nav-links">
+          <div class="dropdown">
+            <a href="index.html">HOME</a>
+          </div>
+          <!-- <a href="#" class="active">HOME</a> -->
+          <div class="dropdown">
+            <a href="about.html" class="active">ABOUT</a>
+          </div>
+          <div class="dropdown">
+            <a href="services.html">SERVICES</a>
+          </div>
+          <a href="contact.html">CONTACT US</a>
+          <a href="#" class="client-portal-btn">CLIENT PORTAL</a>
+        </div>
+
+        <button class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <section class="about">
+      <div class="about-container">
+        <div class="firm-intro">
+          <h2>Our Firm</h2>
+          <p>
+            At Kelley Accounting and Tax Advisors, we believe that the best
+            financial advice comes from a balance of deep-rooted experience and
+            technical expertise. Our firm was built on the foundation of a
+            father-son partnership, bringing together two generations of
+            dedicated service to the Texas small business community.
+          </p>
+          <p>
+            Our goal is to give our clients peace of mind that their complicated
+            tax and financial situations are handled with individual care and
+            precision, while building lasting relationships by providing
+            business owners and individuals direct, personal access to a CPA
+            advisor.
+          </p>
+        </div>
+
+        <!-- Curt's Section -->
+        <div class="person-section">
+          <div class="person-image">
+            <img src="assets/Group 1.png" alt="Curt Kelley" />
+          </div>
+          <div class="person-info">
+            <h2>Curt Kelley, CPA</h2>
+            <p>
+              A 2004 Baylor University graduate, Curt spent the first decade of
+              his career as a public high school educator, mastering the art of
+              breaking down and explaining complex ideas. He now uses that skill
+              to help small business owners navigate intricate accounting and
+              financial concepts, empowering them to make more informed,
+              confident decisions.
+            </p>
+            <p>
+              Curt’s transition to accounting began in 2012, driven by a desire
+              to build a career that better supported his growing family. While
+              working as an educator and raising young children, he earned the
+              additional college credits required for the CPA exam. By 2015, he
+              passed the final section, averaging a 95% across all four parts of
+              the exam—a score that placed him in the top 0.1% of CPA candidates
+              nationwide.
+            </p>
+            <p>
+              Since 2015, Curt has dedicated his practice to public accounting,
+              serving as a strategic advisor for small businesses and the
+              families who build them.
+            </p>
+          </div>
+        </div>
+
+        <!-- Ed's Section -->
+        <div class="person-section reverse">
+          <div class="person-image">
+            <img src="assets/Ed no BG.png" alt="Eddie Kelley" />
+          </div>
+          <div class="person-info">
+            <h2>Eddie Kelley, CPA</h2>
+            <p>
+              Ed is the foundational pillar of the firm, bringing decades of
+              financial expertise to the table.
+            </p>
+            <p>
+              A 1972 graduate of the University of Houston, Ed’s career began in
+              the private sector with Mitchell Energy and later as an Assistant
+              Controller in the transportation industry. These early years
+              provided him with an “inside-out” understanding of corporate
+              operations that most public accountants never see.
+            </p>
+            <p>
+              In 1981, Ed followed his entrepreneurial spirit and founded the
+              predecessor to our current firm. For over 30 years, Ed operated as
+              a solo practitioner, forming meaningful partnerships with many
+              local area businesses.
+            </p>
+            <p>
+              In 2015, Ed brought his son, Curt, on to the business and imparted
+              much of that experience; both accounting and maintaining client
+              relationships; which has led to the firm’s modern identity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <img src="assets/logo.png" class="logo-img" />
+          <p>Hours: Mon-Fri 9am - 5pm</p>
+          <p>Address: 123 Main St, Anytown, USA</p>
+          <p>Phone: (123) 456-7890</p>
+        </div>
+        <div class="footer-right">
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/yourpage" target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about-us">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Mobile menu functionality
+      document
+        .querySelector(".mobile-menu-btn")
+        .addEventListener("click", function () {
+          this.classList.toggle("active");
+          document.querySelector(".nav-links").classList.toggle("active");
+        });
+    </script>
+  </body>
+</html>
