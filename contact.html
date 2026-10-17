@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelley ATA - Contact Us</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/Icon no BG.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo">
+          <img src="assets/logo.png" alt="RHN" class="logo-img" />
+        </div>
+
+        <div class="nav-links">
+          <div class="dropdown">
+            <a href="index.html">HOME</a>
+          </div>
+          <div class="dropdown">
+            <a href="about.html">ABOUT</a>
+          </div>
+          <div class="dropdown">
+            <a href="services.html">SERVICES</a>
+          </div>
+          <a href="contact.html" class="active">CONTACT US</a>
+          <a href="#" class="client-portal-btn">CLIENT PORTAL</a>
+        </div>
+
+        <button class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <section class="contact">
+      <div class="container">
+        <div class="contact-intro">
+          <h1>Contact Us</h1>
+          <p>
+            Reach out with questions about our services or to schedule a
+            conversation. We look forward to hearing from you.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-form-panel">
+            <h2>Send a Message</h2>
+            <form
+              class="contact-form"
+              action="https://formsubmit.co/b906386a1a67fa833d12e8df7c410bc4"
+              method="POST"
+              id="contact-form"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New contact form message — Kelley ATA"
+              />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone <span class="optional">(optional)</span></label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  autocomplete="tel"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Honeypot field for spam protection (leave empty) -->
+              <input
+                type="text"
+                name="_honey"
+                class="honeypot"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+              />
+
+              <button type="submit" class="contact-submit-btn">
+                Send Message
+              </button>
+
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <div class="contact-info-panel">
+            <h2>Visit Our Office</h2>
+
+            <div class="contact-details">
+              <div class="contact-detail">
+                <h3>Address</h3>
+                <p>
+                  13803 Madera Run Parkway<br />
+                  Suite 302<br />
+                  Humble, TX 77346
+                </p>
+              </div>
+
+              <div class="contact-detail">
+                <h3>Phone</h3>
+                <p>
+                  <a href="tel:2815401024">281-540-1024</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-map">
+              <iframe
+                title="Kelley ATA office location"
+                src="https://www.google.com/maps?q=13803+Madera+Run+Parkway+Suite+302,+Humble,+TX+77346&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <a
+              class="directions-btn"
+              href="https://www.google.com/maps/dir/?api=1&destination=13803+Madera+Run+Parkway+Suite+302,+Humble,+TX+77346"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get Directions
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <img src="assets/logo.png" class="logo-img" />
+          <p>Hours: Mon-Fri 9am - 5pm</p>
+          <p>
+            Address: 13803 Madera Run Parkway Suite 302, Humble, TX 77346
+          </p>
+          <p>Phone: 281-540-1024</p>
+        </div>
+        <div class="footer-right">
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/yourpage" target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu functionality
+      document
+        .querySelector(".mobile-menu-btn")
+        .addEventListener("click", function () {
+          this.classList.toggle("active");
+          document.querySelector(".nav-links").classList.toggle("active");
+        });
+
+      // Contact form submission via FormSubmit (AJAX for inline status)
+      const contactForm = document.getElementById("contact-form");
+      const formStatus = document.getElementById("form-status");
+
+      contactForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+        formStatus.textContent = "Sending…";
+        formStatus.className = "form-status";
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: "POST",
+            body: new FormData(contactForm),
+            headers: { Accept: "application/json" },
+          });
+
+          if (response.ok) {
+            formStatus.textContent =
+              "Thank you! Your message has been sent. We’ll be in touch soon.";
+            formStatus.className = "form-status success";
+            contactForm.reset();
+          } else {
+            formStatus.textContent =
+              "Sorry, something went wrong. Please try again or call us.";
+            formStatus.className = "form-status error";
+          }
+        } catch (error) {
+          formStatus.textContent =
+            "Sorry, something went wrong. Please try again or call us.";
+          formStatus.className = "form-status error";
+        }
+      });
+    </script>
+  </body>
+</html>
