@@ -61,7 +61,7 @@
             <h2>Send a Message</h2>
             <form
               class="contact-form"
-              action="https://formsubmit.co/noreply@kelleyata.com"
+              action="https://formspree.io/f/maeobaln"
               method="POST"
               id="contact-form"
             >
@@ -70,8 +70,6 @@
                 name="_subject"
                 value="New contact form message — Kelley ATA"
               />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_captcha" value="false" />
 
               <div class="form-group">
                 <label for="name">Name</label>
@@ -115,7 +113,7 @@
               <!-- Honeypot field for spam protection (leave empty) -->
               <input
                 type="text"
-                name="_honey"
+                name="_gotcha"
                 class="honeypot"
                 tabindex="-1"
                 autocomplete="off"
@@ -211,7 +209,7 @@
           document.querySelector(".nav-links").classList.toggle("active");
         });
 
-      // Contact form submission via FormSubmit (AJAX for inline status)
+      // Contact form submission via Formspree (AJAX for inline status)
       const contactForm = document.getElementById("contact-form");
       const formStatus = document.getElementById("form-status");
 
